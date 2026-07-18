@@ -1,22 +1,4 @@
-  # Optional: Tags to apply to all resources
-  default_tags {
-    tags = {
-      Environment = var.environment
-      ManagedBy   = "Terraform"
-      Project     = var.project_name
-    }
-  }
-  
-  # Optional: S3 backend configuration (should be in backend.tf, not here)
-  # backend "s3" {
-  #   bucket         = "terraform-state-bucket"
-  #   key            = "project/terraform.tfstate"
-  #   region         = "us-east-1"
-  #   encrypt        = true
-  #   dynamodb_table = "terraform-locks"
-  # }
-
-# variables.tf content - add these to a separate variables.tf file
+  # variables.tf content - add these to a separate variables.tf file
 variable "aws_region" {
   description = "AWS region to deploy resources"
   type        = string
